@@ -3,7 +3,7 @@ def read(filename: str) -> list[str]:
     if not os.path.exists(filename):
         raise RuntimeError(f"File {filename} does not exist.")
     with open(filename,"r") as file:
-        return file.readlines()
+        return file.read().splitlines()
 
 
 def import_solve(day: int) -> object:
