@@ -78,7 +78,7 @@ def solve_1(data: list[str]) -> int:
     blocks=[data[a+1:b] for a,b in zip([-1]+breaks,breaks+[len(data)])]
     return perform(blocks, analyse_field)
 
-def solve_1(data: list[str]) -> int:
+def solve_2(data: list[str]) -> int:
     breaks=[i for i in range(len(data)) if data[i]==""]
     blocks=[data[a+1:b] for a,b in zip([-1]+breaks,breaks+[len(data)])]
     return perform(blocks, relaxed_analyse_field)
